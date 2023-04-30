@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --main-color: #2196f3;
+    --main-color-alt: #1787e0;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+  }
+  
+  html {
+    --scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #b17a56;
+    font-family: "Cairo" , sans-serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .main-title {
+    text-transform: uppercase;
+    margin: 0 auto 107px;
+    color: #ffffff;
+    border-radius: 6px;
+    border: 3px solid #ebc98c;
+    padding: 10px 20px;
+    font-size: 30px;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+    transition: var(--main-transition);
+  }
+  
+  
+  /*Start Landing*/
+  .landing {
+    position: relative;
+    margin: 0;
+  }
+  
+  .landing::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 100%;
+    background-color: #8f553075;
+    z-index: -1;
+    transform: skewY(-6deg);
+    transform-origin: top left;
+  }
+  
+  .landing .container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 47px;
+    justify-content: space-evenly;
+  }
+  
+  .landing .text {
+    flex: 1;
+    padding: 15px;
+    margin-bottom: 105px;
+    width: 45%;
+  }
+  
+  @media (max-width: 991px) {
+    .landing .text {
+        text-align: center;
+  
+    }
+  }
+  
+  .landing .text h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    letter-spacing: -2px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 767px) {
+    .landing .text h1 {
+        font-size: 28px;
+    }
+  }
+  
+  .landing .text p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin: 5px 5px 5px;
+    color: rgb(245 245 245);
+    text-align: center;
+  }
+  
+  @media (max-width: 991px) {
+    .landing .text p {
+        margin: 10px auto;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .landing .text p {
+        font-size: 18px;
+    }
+  }
+  
+  .social {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+  }
+  .social a {
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: .9;
+    transition: var(--main-transition);
+  }
+  
+  .social a:hover {
+  
+    transform: scale(1.3);
+    opacity: .7;
+  }
+  
+  .social a i {
+  
+  font-size: 30px;
+  
+  color: #ebca8c;
+  
+  margin: 15px auto;
+  
+  transition: var(--main-transition);
+  }
+  
+  .social a:hover i {
+    color: #8f54309d;
+  
+  }
+  
+  .landing .image #image {
+    width: 457px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    
+  }
+  
+  @media (max-width: 991px) {
+    .landing .image {
+        display: none;
+    }
+  }
+  
+  figcaption{
+    color: #e6e6e7;
+    font-size: 12px;
+    margin: 1% auto;
+  }
+  
+  
+  /*End Landing*/
+  
+  
+  
+  /* Start achievements */
+  .achievements {
+    
+        padding-top: 65px;
+        padding-bottom: 65px;
+        position: relative;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+  }
+  .achievements .container {
+    display: flex;
+  
+    gap: 40px;
+    margin-left: 79px;
+    margin-right: 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .achievements .box {
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    background-color: #ececec;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 30%;
+    flex-shrink: 0;
+    transition: transform var(--main-transition), box-shadow var(--main-transition);
+  }
+  .achievements .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+  }
+  .achievements .box img {
+    width: 100%;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .achievements .box .content {
+    padding: 20px;
+  }
+  .achievements .box .content h3 {
+    margin: 0;
+    color: #8f5530;
+  }
+  .achievements .box .content p {
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #777;
+  }
+  .achievements .box .info {
+    padding: 20px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .achievements .box .info a {
+    color: #8f5530;
+    font-weight: bold;
+  }
+  .achievements .box .info i {
+    color: #8f5530;
+  }
+  .achievements .box:hover .info i {
+    animation: moving-arrow 0.6s linear infinite;
+  }
+  /* End achievements */
+  
+  
+  /* Start inspiration */
+  .inspiration {
+    position: relative;
+    background-color: #b17a56;
+    padding-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .inspiration .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .inspiration .box {
+    height: 250px;
+    padding: 20px;
+    background-color: #ececec;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    position: relative;
+    margin: auto 150px;
+    height: fit-content;
+  }
+  .inspiration .box img {
+    position: absolute;
+    right: -15px;
+    top: -35px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 7px solid #ececec;
+  }
+  .inspiration .box h3 {
+    color: #8f5530;
+    margin-top: 20px;
+    margin-bottom: -7px;
+    font-size: 28px;
+  }
+  .inspiration .box .title {
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .inspiration .box p {
+    margin-top: 40px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    padding: 5px;
+    color: #777;
+  }
+  .image {
+    align-self: center;
+    width: 45%;
+  }
+  /* End inspiration */
+  
+  
+  @keyframes up-and-down {
+  
+    0%,
+    100% {
+        top: 0;
+    }
+  
+    50% {
+        top: -50px;
+    }
+  }
+  
+  
+  
